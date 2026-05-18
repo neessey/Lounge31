@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-cream: #d5c8b3;
+    --color-cream-light: #e4ddd0;
+    --color-gold: #c8a87c;
+    --color-dark: #1a1512;
+    --color-dark-green: #2d3129;
+}
+
+@layer base {
+    * {
+        border-color: hsl(var(--border));
+        --tw-border-opacity: 1;
+        border-color: rgb(var(--border-rgb) / var(--tw-border-opacity));
+    }
+
+    body {
+        @apply bg-[#d5c8b3] text-[#1a1512] font-sans;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: var(--font-bad-script), cursive;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d5c8b3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c8a87c;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a88a5c;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text selection */
+::selection {
+    background-color: #c8a87c;
+    color: #1a1512;
+}
+
+.test-css {
+    color: red;
+    font-size: 60px;
+}
